@@ -1,0 +1,294 @@
+
+测试 程序1：定义和初始化   一些基本运算
+int main()
+{
+int a = 5;
+int b = 10,c;
+c = a + b;
+printf c;
+int m=a+b*c;
+printf m;
+return 0;
+}
+//完成  
+//修改了乘除膜运算是同级的   应该从左往右依次运算
+
+
+
+//测试程序2：完成if 
+int main()
+{
+int a = 5,b = 4;
+int max =a;
+if(b > a) {
+max = b;
+}
+printf max;
+return 0;
+}
+//完成 
+//如果不执行if应该把这部分直接跳过
+
+
+//测试程序 3 if-else语句同时使用
+int main()
+{
+int a = 5,b = 4;
+int max;
+if(b > a) {
+max = b;
+}
+else{
+max = a;
+}
+printf max;
+return 0;
+}
+
+
+int main()
+{
+int a = 4,b = 5;
+int max;
+if(b > a) {
+max = b;
+}
+else{
+max = a;
+}
+printf max;
+return 0;
+}
+
+//完成
+//if执行完后应该把else的部分跳过
+
+
+//测试程序4  对while测试
+int main()
+{
+int n = 10;
+int sum = 0;
+while(n--)
+{
+sum = sum+n;
+}
+printf sum;
+return 0;
+}
+//完成
+//一次循环后应该把词法记号回退到while之后
+//修正了自加减操作应该是先返回值再进行改变
+
+
+//测试程序5  对while+if进行测试
+int main()
+{
+int n = 15;
+while(n--)
+{
+if(n%2==0)
+{
+printf n;
+}
+}
+return 0;
+}
+
+//完成
+//修正了一个作用域是由两个花括号匹配而成 
+
+
+//测试程序6  对continue进行测试
+int main()
+{
+int n  = 15;
+while(n--)
+{
+if(n%2==0)
+{
+continue;
+}
+write n;
+}
+return 0;
+}
+//完不成了
+
+
+
+
+
+//翻译测试程序1
+int main()
+{
+int a,b,e;
+a = 5;
+b = 3;
+e= a + b;
+printf e;
+return 0;
+}
+
+
+//翻译程序2，加入减法
+int main()
+{
+int a,b,e,f;
+a = 5;
+b = 8;
+e = a+b;
+f = e-b;
+printf f;
+return 0;
+}
+//实现了减法
+int main()
+{
+int a = 5,b = 8,e =a+b ,f;
+f = e - b;
+printf f;
+return 0;
+}
+//修复了 无法在定义中 直接赋值的BUG
+int main()
+{
+int a = -5,b = 8,e =a+b ,f;
+f = e - b;
+printf f;
+return 0;
+}
+//发现负数运算 尚未 实现
+//实现了
+
+
+//程序3，加入乘法
+int main()
+{
+int a,b,e;
+a = 3;
+printf a;
+b = 29;
+printf b;
+e = a*b;
+printf e;
+return 0;
+}
+
+//debug 发现定义变量没考虑分隔符额问题
+//修复
+
+//发现函数没有花括号的问题无法解决
+//无法终止子程序
+
+
+
+
+
+
+
+
+//修正了负数问题
+7.int main()
+{
+int n = -1,sum =0;
+while(n >= -100)
+{
+sum  = sum +n;
+n--;
+}
+write sum;
+}
+
+
+//
+翻译4 加入除法
+暂定只有整数除
+
+
+int main()
+{
+int a = 30,b = 6,e;
+e = a/6;
+printf e;
+}
+//ok
+
+翻译5 四则运算
+int main()
+{
+int a,b,e,f,g,res;
+a = 9;
+b = 3;
+e = 5;
+f = 2;
+g = 4;
+res = a*(b+e)/(g-f);
+printf res;
+}
+//ok  完美
+
+8.加入逻辑或
+int main()
+{
+int a = 0;
+int b = 1;
+if ((a == 0) || (b == 6))
+{
+printf a;
+}
+}
+
+
+9.加入逻辑与
+int main()
+{
+int a = 0;
+int b = 1;
+if ((a == 0) && (b == 1))
+{
+printf a;
+}
+}
+
+10.加入逻辑非
+int main()
+{
+int a = 0;
+int b = 0;
+if (!(b == a))
+{
+printf a;
+}
+return 0;
+}
+
+11.双重循环未实现
+int main()
+{
+int i = 10,j = 10;
+int a = 1;
+while(i --)
+{
+while(j --)
+{
+printf a;
+}
+}
+return 0;
+}
+//实现了
+
+int main()
+{
+int i = 10,j = 10,sum = 0;
+while(i--)
+{
+while(j--)
+{
+sum++;
+}
+j = 10;
+}
+printf sum;
+}
